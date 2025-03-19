@@ -1,9 +1,9 @@
 import json
 import requests
 
-city = 'Perm'
-key = '1959ab8d4e86e0a1f706f7b74af6cdf4'
-response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city}&APPID={key}')
+CITY = 'Perm'
+KEY = '1959ab8d4e86e0a1f706f7b74af6cdf4'
+response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={CITY}&APPID={KEY}')
 result = json.loads(response.text)
 
 temperature = int((int(result['main']['temp']) - 273.15))
